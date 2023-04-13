@@ -6,7 +6,7 @@
 /*   By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 13:04:24 by mbaptist          #+#    #+#             */
-/*   Updated: 2023/04/13 16:19:46 by mbaptist         ###   ########.fr       */
+/*   Updated: 2023/04/13 17:01:35 by mbaptist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_atoi(char *str)
 {
 	int	i;
-	int	siiiiiiiiiiiiign;
+	int	sign;
 	int	res;
 
 	i = 0;
