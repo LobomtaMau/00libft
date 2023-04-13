@@ -6,7 +6,7 @@
 /*   By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 11:54:40 by mbaptist          #+#    #+#             */
-/*   Updated: 2023/04/12 12:09:31 by mbaptist         ###   ########.fr       */
+/*   Updated: 2023/04/13 17:22:06 by mbaptist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dstize)
 	size_t	i;
 	size_t	j;
 
-	lensrc = strlen(src);
+	lensrc = ft_strlen(src);
 	i = 0;
 	if (dstize == 0)
 		return (lensrc);
