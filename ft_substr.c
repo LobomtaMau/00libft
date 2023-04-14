@@ -6,7 +6,7 @@
 /*   By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 11:30:55 by mbaptist          #+#    #+#             */
-/*   Updated: 2023/04/13 12:57:28 by mbaptist         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:24:08 by mbaptist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	{
 		return (ft_strdup(""));
 	}
-	sub = (char *)malloc(sizeof(len + 1));
+	sub = (char *)malloc(sizeof(char) * (len + 1));
 	{
 		if (!sub)
 		{

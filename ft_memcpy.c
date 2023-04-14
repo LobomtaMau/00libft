@@ -6,7 +6,7 @@
 /*   By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:53:06 by mbaptist          #+#    #+#             */
-/*   Updated: 2023/04/13 15:04:06 by mbaptist         ###   ########.fr       */
+/*   Updated: 2023/04/14 13:43:48 by mbaptist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (!dest || !src)
 	{
 		return (NULL);
+	}
+	if (n == 0)
+	{
+		return (dest);
 	}
 	i = 0;
 	while (i < n)

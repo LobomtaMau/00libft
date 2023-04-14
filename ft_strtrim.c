@@ -6,7 +6,7 @@
 /*   By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 10:51:38 by mbaptist          #+#    #+#             */
-/*   Updated: 2023/04/13 13:21:34 by mbaptist         ###   ########.fr       */
+/*   Updated: 2023/04/14 11:04:43 by mbaptist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,21 +32,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	}
 	return (ft_substr(start, 0, end - start + 1));
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	const char	*str;
-	const char	*set;
-	char		*res;
-
-	str = "Vammos Nisso cammandro";
-	set = "m";
-	res = ft_strtrim(str, set);
-	printf("antes: %s\n", str);
-	printf("Depois do corte: %s\n", res);
-	free(res);
-	return (0);
 }
