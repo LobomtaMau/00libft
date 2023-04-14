@@ -6,7 +6,7 @@
 /*   By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:05:41 by mbaptist          #+#    #+#             */
-/*   Updated: 2023/04/14 13:39:57 by mbaptist         ###   ########.fr       */
+/*   Updated: 2023/04/14 15:28:51 by mbaptist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (s == NULL)
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		return (NULL);
+		if (s[i] == ((char)c))
+			return ((char *)s + i);
+		i++;
 	}
-	while (*s)
-	{
-		if (*s == c)
-		{
-			return ((char *)s);
-		}
-		s++;
-	}
-	if (*s == c)
-	{
-		return ((char *)s);
-	}
+	if (s[i] == ((char)c))
+		return ((char *)s + i);
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 #    By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:24:39 by mbaptist          #+#    #+#              #
-#    Updated: 2023/04/14 12:55:14 by mbaptist         ###   ########.fr        #
+#    Updated: 2023/04/14 15:43:23 by mbaptist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS) 
 	$(AR) $(NAME) $(OBJS)
-
 
 clean:
 	$(RM) $(OBJS)
