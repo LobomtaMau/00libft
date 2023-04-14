@@ -6,7 +6,7 @@
 #    By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:24:39 by mbaptist          #+#    #+#              #
-#    Updated: 2023/04/14 17:27:18 by mbaptist         ###   ########.fr        #
+#    Updated: 2023/04/14 17:45:59 by mbaptist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ BONUS_OBJS = $(BONUS:.c=.o)
 OBJS = $(SRCS:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I
 AR = ar rcs
 RM = rm -f
 
