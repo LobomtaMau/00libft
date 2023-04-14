@@ -6,7 +6,7 @@
 /*   By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 14:16:25 by mbaptist          #+#    #+#             */
-/*   Updated: 2023/04/14 16:15:38 by mbaptist         ###   ########.fr       */
+/*   Updated: 2023/04/14 17:43:28 by mbaptist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -50,5 +56,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+t_list	*ft_lstnew(void *content);
 
 #endif
