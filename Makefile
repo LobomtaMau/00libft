@@ -6,7 +6,7 @@
 #    By: mbaptist <mbaptist@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 16:24:39 by mbaptist          #+#    #+#              #
-#    Updated: 2023/04/17 11:54:31 by mbaptist         ###   ########.fr        #
+#    Updated: 2023/04/17 16:21:35 by mbaptist         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,20 +34,23 @@ BONUS_OBJS = $(BONUS:.c=.o)
 OBJS = $(SRCS:.c=.o)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I
+CFLAGS = -Wall -Wextra -Werror -Iincludes
 AR = ar rcs
 RM = rm -f
+
+all: $(NAME)
 
 $(NAME): $(OBJS) 
 	$(AR) $(NAME) $(OBJS)
 
-all: $(NAME)
+bonus: $(OBJS) $(BONUS_OBJS)
+	$(AR) $(NAME) $(BONUS_OBJS)
 
 %.o: %.c
-		$(CC) $(CFLAGS) includes -c $< -o $(<:.c=.o)
+	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(OBJS) $(BONUS_OBJS)
-			$(AR) $(NAME) $(OBJS) $(BONUS_OBJS)
+$(BONUS_OBJS): %.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
